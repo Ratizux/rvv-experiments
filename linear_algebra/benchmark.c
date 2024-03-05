@@ -22,10 +22,10 @@ int main()
 	printf(", %.1lf/Vector",mat_sum(m,o,vvans));
 	#endif
 	printf("\n");
-	printf("Scalar: %.2lf GFLOPS\n",(double)ops/scalar_time_sec/1024/1024);
+	printf("Scalar: %.2lf MFLOPS\n",(double)ops/scalar_time_sec/1024/1024);
 	#ifdef RVV
 	double vector_time_sec=(double)(time_c-time_b)/CLOCKS_PER_SEC;
-	printf("Vector: %.2lf GFLOPS\n",(double)ops/vector_time_sec/1024/1024);
+	printf("Vector: %.2lf MFLOPS\n",(double)ops/vector_time_sec/1024/1024);
 	#endif
 	mat_dealloc(m,a);
 	mat_dealloc(o,bt);
